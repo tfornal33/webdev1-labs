@@ -37,27 +37,22 @@ nav ul {
 }
 
 nav ul li {
-   display: inline;
-}
-
-nav ul li a {
    padding: 10px 20px;
-   text-align: center;
-   display: inline-block;
-   width: 25%;
-   box-sizing: border-box;
 }
 
 nav ul li a:link,
 nav ul li a:visited {
-   background-color: dodgerblue;
    color: white;
    text-decoration: none;
 }
 
-nav ul li a:hover,
+nav ul li a:hover {
+   text-decoration: underline;
+}
+
 nav ul li a:active {
-   background-color: lightskyblue;
+   color: navy;
+   text-decoration: none;
 }
 
 #tagline {
@@ -104,4 +99,23 @@ body {
 #container {
    width: 80%;
    margin: 0 auto;
+}
+
+img.feature {
+   float: right;
+   margin-left: 1%;
+}
+
+#content {
+   display: flex;
+}
+
+nav {
+   background-color: dodgerblue;
+   flex: 1;
+}
+
+main {
+  flex:5;
+  padding-left:1em;
 }

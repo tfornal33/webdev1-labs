@@ -1,8 +1,50 @@
-h1, h2{
-    color: white;
-    background-color: green;
+body {
+    font-family: BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f7f9fa; 
+    color: #2e7d32;            
+    margin: 0;                                 
+    padding: 2.5rem;                             
+    line-height: 1.6;
 }
 
-body {
-    background-color: lightgreen;
+h1, h2 {
+    color: #ffffff;
+    background-color: #2e7d32;              
+    padding: 14px 22px;         
+    margin-top: 0;              
+    margin-bottom: 1.5rem;      
+    border-radius: 6px;                       
+    max-width: 700px;
+}
+
+a:link, a:visited {
+    color: #2e7d32;               
+    text-decoration: none;        
+    border-bottom: 2px solid rgba(46, 125, 50, 0.2); 
+    font-weight: 600;             
+}
+
+a:hover {
+    color: #1b5e20;               
+    border-bottom-color: #1b5e20; 
+    background-color: rgba(46, 125, 50, 0.05); 
+}
+
+a:active {
+    color: #4caf50;               
+}
+
+a.ui-button:link, a.ui-button:visited {
+    display: inline-block;        
+    color: #ffffff;               
+    background-color: #2e7d32;     
+    padding: 10px 20px;           
+    border-radius: 4px;           
+    text-decoration: none;        
+    font-weight: bold;
+}
+
+a.ui-button:hover {
+    background-color: #1b5e20;    
+    color: #ffffff;               
 }
