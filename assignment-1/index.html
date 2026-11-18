@@ -2,20 +2,27 @@
 <html lang="en">
 
 <head>
+  <!-- these settings tell the browser how to display and describe this page -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Home — a personal website by Tomasz Fornal.">
+  <!-- this title appears in the browser tab -->
   <title>Home | Tomasz Fornal</title>
+  <!-- this loads the stylesheet shared by every page -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-  <header class="site-header">
-    <div class="container header-content">
-      <a class="brand" href="index.html">Tomasz Fornal<span>Personal website</span></a>
-      <nav aria-label="Main navigation">
+<!-- the top ID gives the footer link a place to return to -->
+<body id="top">
+  <!-- this header contains the website name and navigation links -->
+  <header>
+    <div class="container">
+      <!-- this link returns visitors to the home page -->
+      <a class="site-name" href="index.html">Tomasz Fornal</a>
+      <!-- this navigation list provides a link to each page -->
+      <nav>
         <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About me</a></li>
           <li><a href="interests.html">Interests</a></li>
           <li><a href="travels.html">My travels</a></li>
@@ -23,50 +30,61 @@
       </nav>
     </div>
   </header>
-  <main id="main-content" class="container">
-    <section class="intro" aria-labelledby="welcome-title">
-      <div class="intro-copy">
-        <p class="small-heading">WELCOME TO MY PERSONAL WEBSITE</p>
-        <h1 id="welcome-title">Hello, I'm<br><span>Tomasz Fornal.</span></h1>
-        <p class="intro-paragraph">I'm a SETU Waterford student, currently studying Computer Forensics and Security!</p>
-        <a class="button" href="about.html">Get to know me <span aria-hidden="true">↗</span></a>
+
+  <!-- this main element contains the unique content of the home page -->
+  <main class="container">
+    <!-- this introduction section presents the website with text and a photo of me -->
+    <section class="home-introduction">
+      <div>
+        <p class="label">Welcome to my personal website!!!</p>
+        <h1>Hello, I'm<br>Tomasz Fornal.</h1>
+        <p>I'm a SETU Waterford student, currently studying Computer Forensics and Security.</p>
+        <a class="button" href="about.html">Get to know me</a>
       </div>
-      <figure class="portrait">
+      <!-- this figure groups the profile photo with its description -->
+      <figure>
         <img src="images/me.jpeg" alt="Image of me" width="640" height="460">
       </figure>
     </section>
-    <section class="section-spacing" aria-labelledby="explore-title">
-      <div class="section-heading">
-        <p class="small-heading">A FEW THINGS ABOUT ME</p>
-        <h2 id="explore-title">Take a look around.</h2>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <p class="card-number">01 / MY STORY</p>
+
+    <!-- this section gives visitors a quick way to explore the other pages in the form of "cards" -->
+    <section>
+      <h2>Check out my pages!</h2>
+
+      <div class="card-list">
+        <!-- this card links to the page about my background -->
+        <article>
+          <p class="card-label">1 / My story</p>
           <h3>About me</h3>
-          <p>Get to know me and my background.</p><a href="about.html">Read my story <span
-              aria-hidden="true">↗</span></a>
+          <p>Get to know me and my background.</p>
+          <a href="about.html">Read my story</a>
         </article>
-        <article class="card">
-          <p class="card-number">02 / OUTSIDE THE CLASSROOM</p>
+
+        <!-- this card links to the page about my hobbies -->
+        <article>
+          <p class="card-label">2 / Outside the classroom</p>
           <h3>My interests</h3>
-          <p>Get to know my interests and hobbies!</p><a href="interests.html">Explore my interests <span
-              aria-hidden="true">↗</span></a>
+          <p>Get to know my interests and hobbies!</p>
+          <a href="interests.html">Explore my interests</a>
         </article>
-        <article class="card">
-          <p class="card-number">03 / PLACES TO EXPLORE</p>
+
+        <!-- this card links to the page about my travel plans -->
+        <article>
+          <p class="card-label">3 / Places to explore</p>
           <h3>My travels</h3>
-          <p>Have a look at where I've been.</p><a href="travels.html">Explore my travel plans <span
-              aria-hidden="true">↗</span></a>
+          <p>Have a look at where I've been.</p>
+          <a href="travels.html">Explore my travel plans</a>
         </article>
       </div>
     </section>
   </main>
-  <footer class="site-footer">
-    <div class="container footer-inner">
+
+  <!-- this footer shows the site copyright (my name), name, and back-to-top link -->
+  <footer>
+    <div class="container footer-row">
       <p>&copy; 2026 Tomasz Fornal</p>
-      <p>A little about me, and what I enjoy.</p>
-      <a href="#main-content">Back to top ↑</a>
+      <p>My Personal Website</p>
+      <a href="#top">Back to top</a>
     </div>
   </footer>
 </body>

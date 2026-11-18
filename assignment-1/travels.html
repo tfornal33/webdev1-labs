@@ -2,61 +2,80 @@
 <html lang="en">
 
 <head>
+  <!-- these settings tell the browser how to display and describe this page -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="My travels - a personal website by Tomasz Fornal.">
+  <!-- this title appears in the browser tab -->
   <title>My travels | Tomasz Fornal</title>
+  <!-- this loads the stylesheet shared by every page -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-  <header class="site-header">
-    <div class="container header-content">
-      <a class="brand" href="index.html">Tomasz Fornal<span>Personal website</span></a>
-      <nav aria-label="Main navigation">
+<!-- the top ID gives the footer link a place to return to -->
+
+<body id="top">
+  <!-- this header contains the website name and navigation links -->
+  <header>
+    <div class="container">
+      <!-- this link returns visitors to the home page -->
+      <a class="site-name" href="index.html">Tomasz Fornal</a>
+      <!-- this navigation list provides a link to each page -->
+      <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About me</a></li>
           <li><a href="interests.html">Interests</a></li>
-          <li><a href="travels.html" aria-current="page">My travels</a></li>
+          <li><a href="travels.html">My travels</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <main id="main-content" class="container">
-    <header class="page-heading">
-      <p class="small-heading">03 / PLACES TO EXPLORE</p>
+
+  <!-- this main element contains the unique content of the Travels page -->
+  <main class="container">
+    <!-- this introduction gives the page title -->
+    <header>
+      <p class="label">3 / Places to explore</p>
       <h1>The places I'd love to explore.</h1>
     </header>
-    <div class="two-column-layout">
-      <section class="text-content" aria-labelledby="goals-title">
-        <h2 id="goals-title">Places I'd like to visit</h2>
+
+    <!-- this wrapper places the destination list beside links for trip research -->
+    <div class="content-columns">
+      <!-- this ordered list numbers the destinations I want to visit -->
+      <section>
+        <h2>Places I'd like to visit</h2>
         <ol class="steps">
-          <li>South Korea - A dazzling mix of ancient palaces and futuristic megacities.</li>
-          <li>Taiwan - Stunning night markets and breathtaking mountain landscapes.</li>
-          <li>Brazil - Vibrant Carnival energy and breathtaking Amazon rainforests.</li>
+          <li>South Korea — a dazzling mix of ancient palaces and futuristic megacities.</li>
+          <li>Taiwan — stunning night markets and breathtaking mountain landscapes.</li>
+          <li>Brazil — vibrant Carnival energy and breathtaking Amazon rainforests.</li>
         </ol>
       </section>
-      <aside class="facts-box" aria-labelledby="resources-title">
-        <p class="small-heading">USEFUL LINKS</p>
-        <h2 id="resources-title">Travel inspiration</h2>
+
+      <!-- this aside groups links to official travel information -->
+      <aside>
+        <p class="label">Useful links</p>
+        <h2>Travel inspiration</h2>
         <p>Links open in a new tab.</p>
+        <!-- these links open the tourism websites in a separate browser tab -->
         <ul class="resource-list">
-          <li><a href="https://english.visitkorea.or.kr/svc/main/index.do" target="_blank">Visit Korea ↗</a></li>
-          <li><a href="https://discover.tw/" target="_blank">Discover Taiwan ↗</a></li>
-          <li><a href="https://visitbrasil.com/en/" target="_blank">Visit Brazil ↗</a></li>
+          <li><a href="https://english.visitkorea.or.kr/svc/main/index.do" target="_blank" rel="noreferrer">Visit
+              Korea</a></li>
+          <li><a href="https://discover.tw/" target="_blank" rel="noreferrer">Discover Taiwan</a></li>
+          <li><a href="https://visitbrasil.com/en/" target="_blank" rel="noreferrer">Visit Brazil</a></li>
         </ul>
       </aside>
     </div>
-    <section class="section-spacing" aria-labelledby="plan-title">
-      <div class="section-heading">
-        <p class="small-heading">PLANNING AN ADVENTURE</p>
-        <h2 id="plan-title">My travel itinerary</h2>
-        <p>My next trip that I'm going on is to Kraków, Poland. Me and my girlfriend are travelling to Zakopane, which
-          is close to Tatry Mountrains for one day, and going for a Polish rap artist concert the next day in Kraków!
-        </p>
-      </div>
+
+    <!-- this section describes my planned trip and shows its schedule -->
+    <section>
+      <h2>My travel itinerary</h2>
+      <p>My next trip is to Kraków, Poland. My girlfriend and I are travelling to Zakopane, close to the Tatra
+        Mountains, for one day, and then we will go to a Polish rap concert the next day in Kraków.</p>
+
+      <!-- this table organizes each travel day by place and activity -->
       <table>
+        <!-- these headings name the information shown in each column -->
         <thead>
           <tr>
             <th scope="col">Day</th>
@@ -64,6 +83,7 @@
             <th scope="col">Activity</th>
           </tr>
         </thead>
+        <!-- these rows list the places and activities planned for each day -->
         <tbody>
           <tr>
             <th scope="row" rowspan="2">Day 1</th>
@@ -85,6 +105,7 @@
             <td>Attend the concert</td>
           </tr>
         </tbody>
+        <!-- this final row summarizes the total number of travel days -->
         <tfoot>
           <tr>
             <th scope="row" colspan="3">Total days in Poland: 3</th>
@@ -93,11 +114,13 @@
       </table>
     </section>
   </main>
-  <footer class="site-footer">
-    <div class="container footer-inner">
+
+  <!-- this footer shows the site copyright, name, and back-to-top link -->
+  <footer>
+    <div class="container footer-row">
       <p>&copy; 2026 Tomasz Fornal</p>
-      <p>A little about me, and what I enjoy.</p>
-      <a href="#main-content">Back to top ↑</a>
+      <p>My Personal Website</p>
+      <a href="#top">Back to top</a>
     </div>
   </footer>
 </body>

@@ -1,481 +1,341 @@
+/* applies border-box sizing and the shared font to every element */
 * {
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* sets the basic page text, spacing, and background */
 body {
   margin: 0;
-  min-height: 100vh;
-  background-color: #efe5d2;
+  line-height: 1.6;
+  color: #202020;
+  background-color: #ffffff;
   background-image: url("../images/background.png");
   background-repeat: repeat;
-  background-size: 740px 740px;
+  background-size: 320px 320px;
 }
 
+/* keeps the page content centred and stops it getting too wide */
 .container {
   width: 90%;
   max-width: 1120px;
   margin: 0 auto;
 }
 
+/* gives every heading the same colour and line height */
 h1,
 h2,
 h3 {
-  line-height: 1.15;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-weight: normal;
+  color: #202020;
+  line-height: 1.2;
 }
 
+/* makes the biggest heading a bit larger */
 h1 {
-  font-size: 3.8rem;
-  margin: 0 0 24px;
-  letter-spacing: -2px;
+  font-size: 2.75rem;
+  margin: 0 0 20px;
 }
 
+/* sizes the second-level headings and adds some space */
 h2 {
-  font-size: 2.3rem;
-  margin: 0 0 20px;
+  font-size: 1.75rem;
+  margin: 32px 0 16px;
 }
 
+/* gives the third-level headings their size and spacing */
 h3 {
-  font-size: 1.65rem;
-  margin: 0 0 16px;
+  font-size: 1.15rem;
+  margin: 0 0 12px;
 }
 
-p {
-  margin: 0 0 20px;
+/* gives normal links a green colour */
+a {
+  color: darkgreen;
 }
 
-a:link {
-  color: #75412e;
-  text-decoration: underline;
-  text-underline-offset: 5px;
-}
-
+/* makes links you've visited a different colour */
 a:visited {
-  color: #63547b;
+  color: darkslateblue;
 }
 
-a:hover {
-  color: #263b31;
-  text-decoration-thickness: 2px;
-}
-
+/* changes the link colour while it is being clicked */
 a:active {
-  color: #9a3518;
+  color: #8b2d2d;
 }
 
-a:focus-visible {
-  outline: 3px solid #a44d2e;
-  outline-offset: 5px;
+/* puts a thin line under the header */
+header {
+  border-bottom: 1px solid white;
 }
 
-.site-header {
-  border-bottom: 1px solid #d7dacf;
-}
-
-.header-content {
+/* lines the website name and navigation up across the header */
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 24px;
-  padding: 24px 0;
+  padding: 18px 0;
 }
 
-a.brand {
-  color: #263b31;
+/* makes the website name a plain, bold link */
+.site-name {
+  color: #202020;
   text-decoration: none;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
-.brand span {
-  display: block;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: .7rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
+/* puts navigation links in a row and removes the bullets */
 nav ul {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  gap: 8px 24px;
-  list-style-type: none;
-  padding: 0;
+  gap: 8px 20px;
+  list-style: none;
   margin: 0;
+  padding: 0;
 }
 
-nav a {
+/* tidies up the navigation and top links */
+nav a,
+a[href="#top"] {
   display: block;
   padding: 8px 0;
-}
-
-nav a:link {
-  color: #263b31;
+  color: #202020;
   text-decoration: none;
 }
 
-nav a:visited {
-  color: #63547b;
-}
-
-nav a:hover {
-  color: #75412e;
+/* underlines navigation links when they are hovered */
+nav a:hover,
+a[href="#top"]:hover,
+.site-name:hover {
   text-decoration: underline;
 }
 
-nav a:active {
-  color: #9a3518;
-}
-
-nav a[aria-current="page"] {
-  border-bottom: 2px solid #a44d2e;
-}
-
-.small-heading {
-  font-size: .72rem;
+/* styles the small labels used around the site */
+.label,
+.card-label {
+  color: #666666;
+  font-size: 0.75rem;
   font-weight: bold;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
 }
 
-.intro-paragraph {
-  font-size: 1.15rem;
-  max-width: 560px;
-}
-
-#main-content {
+/* adds space above and below the main content */
+main {
   padding-top: 48px;
-  padding-bottom: 72px;
+  padding-bottom: 56px;
 }
 
-.intro {
+/* puts the home-page introduction and photo side by side */
+.home-introduction {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 60px;
+  gap: 48px;
+  margin-bottom: 48px;
 }
 
-.intro-copy {
+/* gives the home-page text plenty of room */
+.home-introduction > div {
   flex: 1 1 55%;
-  padding: 24px 0;
 }
 
-.intro h1 span {
-  color: #945135;
-}
-
-.portrait {
+/* gives figures a basic width and removes default spacing */
+figure {
   flex: 0 1 360px;
   margin: 0;
-  transform: rotate(2deg);
-  padding: 12px;
-  background-color: #fff;
-  border: 1px solid #d7dacf;
 }
 
+/* stops images getting wider than their container */
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
+/* makes image captions small and black */
 figcaption {
-  padding: 12px 0;
-  font-size: .8rem;
-  color: #536159;
+  padding-top: 8px;
+  color: black;
+  font-size: 0.8rem;
 }
 
-a.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  padding: 13px 22px;
-  margin-top: 12px;
-  background-color: #263b31;
-  border: 2px solid #263b31;
-  color: #fff;
+/* makes the main action look like a simple dark button */
+.button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 16px;
+  border: 1px solid #202020;
+  background: #202020;
+  color: #ffffff;
   text-decoration: none;
 }
 
-a.button:visited {
-  color: #e5d8f4;
+/* swaps the button colours when it is hovered */
+.button:hover {
+  background: #ffffff;
+  color: #202020;
 }
 
-a.button:hover {
-  background-color: #3e5548;
-}
-
-a.button:active {
-  background-color: #75412e;
-}
-
-.section-spacing {
-  margin-top: 72px;
-}
-
-.section-heading {
-  margin-bottom: 30px;
-}
-
-.section-heading .small-heading {
-  margin-bottom: 12px;
-}
-
-.cards {
+/* puts cards in a flexible row and lets them wrap */
+.card-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 22px;
+  gap: 16px;
+  margin-top: 16px;
 }
 
-.card {
+/* gives each card a border, white background, and vertical layout */
+article {
   flex: 1 1 250px;
-  border-top: 2px solid #9cae9f;
-  padding: 28px 24px;
-  background-color: #c9c9c3;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 24px;
+  border: 1px solid grey;
+  background-color: #ffffffad;
 }
 
-.card>a {
+/* pushes each card link to the bottom */
+article > a {
   margin-top: auto;
-  font-size: .9rem;
+  font-size: 0.999999999rem;
   font-weight: bold;
 }
 
-.card-number {
-  font-size: .7rem;
-  letter-spacing: 1.4px;
-  color: #526458;
-}
 
-.page-heading {
-  max-width: 780px;
-  margin: 10px 0 48px;
-}
-
-.two-column-layout {
+/* puts main content and supporting content in flexible columns */
+.content-columns {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: 56px;
 }
 
-.text-content {
-  flex: 2 1 400px;
+/* gives the main section more room than the aside */
+.content-columns > section {
+  flex: 400px;
 }
 
-.text-content h2:not(:first-child) {
-  margin-top: 36px;
-}
-
-.facts-box {
+/* gives the aside a simple bordered panel */
+aside {
   flex: 1 1 260px;
-  padding: 32px;
-  background-color: #e6ebdf;
-  border-left: 3px solid #7d9380;
+  padding: 24px;
+  border: 1px solid #dddddd;
+  background: rgba(206, 206, 206, 0.24);
 }
 
-.facts-box h2 {
-  font-size: 1.8rem;
-}
-
-dl {
-  margin: 0;
-}
-
-dt {
-  font-size: .75rem;
+/* styles fact labels as small, bold, uppercase text */
+aside dt {
+  font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  margin-top: 12px;
 }
 
-dd {
-  margin: 4px 0 20px;
+/* adds space around the answers in the fact list */
+aside dd {
+  margin: 2px 0 12px;
 }
 
-dd:last-child {
-  margin-bottom: 0;
-}
-
-.detail-list {
-  list-style-type: square;
-  padding-left: 22px;
-}
-
+/* adds a small gap after list items */
+.steps li,
+.resource-list li,
 .detail-list li {
-  padding-left: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.steps {
-  list-style-type: decimal-leading-zero;
-  padding-left: 36px;
+/* makes the quotation stand out in a simple gray panel */
+.quote {
+  margin-top: 40px;
+  padding: 32px;
+  border-left: 4px solid #202020;
+  background: lightgray;
 }
 
-.steps li {
-  padding: 12px 0 12px 8px;
-  border-bottom: 1px solid #d7dacf;
-}
-
-.resource-list {
-  padding-left: 20px;
-  list-style-type: circle;
-}
-
-.resource-list li {
-  margin-bottom: 12px;
-}
-
-.quote-panel {
-  padding: 48px;
-  background-color: #263b31;
-  color: #f6f3eb;
-}
-
-blockquote {
-  margin: 24px 0;
+/* sizes the quote text */
+.quote blockquote {
   max-width: 750px;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 1.8rem;
-  line-height: 1.5;
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+  line-height: 1.4;
 }
 
-.quote-credit {
-  margin-bottom: 0;
-  font-size: .9rem;
-}
-
-.feature-image {
-  flex: 1 1 400px;
+/* tidies up Steve Jobs */
+.quote p {
   margin: 0;
+  font-size: 0.9rem;
 }
 
-.feature-image img {
-  border: 8px solid #fff;
+/* puts the feature image beside its text */
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  flex-wrap: wrap;
 }
 
-.interest-feature {
-  align-items: center;
+/* gives the feature image some extra room */
+.feature figure {
+  flex: 0 1 500px;
 }
 
+/* makes the travel table fill the page and join its borders */
 table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
+  table-layout: fixed;
 }
 
+/* adds padding, borders, and top alignment to table cells */
 th,
 td {
-  padding: 16px 20px;
-  border: 1px solid #d0d8cc;
+  padding: 12px;
+  border: 1px solid #dddddd;
   vertical-align: top;
 }
 
+/* gives the table heading row a dark background */
 thead {
-  background-color: #263b31;
-  color: #fff;
+  background: #202020;
+  color: #ffffff;
 }
 
-tbody tr:nth-of-type(odd) {
-  background-color: #e9ede3;
-}
-
+/* shades every other table row so it is easier to read */
 tbody tr:nth-of-type(even) {
-  background-color: #faf9f4;
+  background: white;
 }
 
+/* shades every other table row so it is easier to read */
+tbody tr:nth-of-type(odd) {
+  background: lightgray;
+}
+
+/* highlights a table row when you hover over it */
 tbody tr:hover {
-  background-color: #dbe5d6;
+  background: #cccccc;
 }
 
+/* styles the table's summary row */
 tfoot {
-  background-color: #dce5d6;
+  background: rgba(184, 184, 184, 0.178);
   font-weight: bold;
 }
 
-.site-footer {
-  border-top: 1px solid #d7dacf;
+/* puts a line above the footer */
+footer {
+  border-top: 1px solid #dddddd;
 }
 
-.footer-inner {
+/* lines up the footer information and adds some padding */
+.footer-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 12px 24px;
-  padding: 28px 0;
-  font-size: .8rem;
+  padding: 24px 0;
+  font-size: 0.8rem;
 }
 
-.footer-inner p {
-  margin: 0;
-}
-
-@media (max-width: 760px) {
-  .header-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  nav ul {
-    gap: 8px 18px;
-  }
-
-  #main-content {
-    padding-top: 30px;
-    padding-bottom: 44px;
-  }
-
-  h1 {
-    font-size: 2.7rem;
-    letter-spacing: -1px;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  .intro {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 30px;
-  }
-
-  .intro-copy,
-  .portrait {
-    flex-basis: auto;
-  }
-
-  .portrait {
-    width: 85%;
-    max-width: 340px;
-    align-self: center;
-  }
-
-  .two-column-layout {
-    gap: 30px;
-  }
-
-  .section-spacing {
-    margin-top: 48px;
-  }
-
-  .quote-panel {
-    padding: 28px;
-  }
-
-  blockquote {
-    font-size: 1.4rem;
-  }
-
-  th,
-  td {
-    padding: 10px 8px;
-  }
-}

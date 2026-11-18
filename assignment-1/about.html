@@ -2,57 +2,65 @@
 <html lang="en">
 
 <head>
+  <!-- these settings tell the browser how to display and describe this page -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="About me - a personal website by Tomasz Fornal.">
+  <!-- this title appears in the browser tab -->
   <title>About me | Tomasz Fornal</title>
+  <!-- this loads the stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-  <header class="site-header">
-    <div class="container header-content">
-      <a class="brand" href="index.html">Tomasz Fornal<span>Personal website</span></a>
-      <nav aria-label="Main navigation">
+<!-- the top ID gives the footer link a place to return to -->
+<body id="top">
+  <!-- this header contains the website name and navigation links -->
+  <header>
+    <div class="container">
+      <!-- this link returns visitors to the home page -->
+      <a class="site-name" href="index.html">Tomasz Fornal</a>
+      <!-- this navigation list provides a link to each page -->
+      <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" aria-current="page">About me</a></li>
+          <li><a href="about.html">About me</a></li>
           <li><a href="interests.html">Interests</a></li>
           <li><a href="travels.html">My travels</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <main id="main-content" class="container">
-    <header class="page-heading">
-      <p class="small-heading">01 / MY STORY</p>
+
+  <!-- this main element contains the content of the About page -->
+  <main class="container">
+    <!-- this introduction gives the page title and a short personal summary -->
+    <header>
+      <p class="label">1 / My story</p>
       <h1>A little about me.</h1>
-      <p class="intro-paragraph">
-        My name is Tomasz, I'm 18 years old, I'm Polish and currently living
-        and studying in Waterford, Ireland.
-      </p>
+      <p>My name is Tomasz, I'm 18 years old, I'm Polish and currently living and studying in Waterford, Ireland.</p>
     </header>
-    <div class="two-column-layout">
-      <section class="text-content" aria-labelledby="story-title">
-        <h2 id="story-title">My background</h2>
-        <p>
-          I was born in Tarnobrzeg, Poland. I moved to Ireland in 2019, when I
-          was 12 years old. I went to Mount Sion CBS in Waterford.
-        </p>
-        <p>
-          I was always fascinated by computers, that's why I decided to choose
-          a college course about computers.
-        </p>
+
+    <!-- this wrapper places the story and quick facts beside each other -->
+    <div class="content-columns">
+      <!-- this section contains the main story and a list of personal values -->
+      <section>
+        <h2>My background</h2>
+        <p>I was born in Tarnobrzeg, Poland. I moved to Ireland in 2019, <br>when I was 12 years old. I went to Mount Sion CBS in Waterford.</p>
+        <p>I was always fascinated by computers, which is why I decided to choose a college course about computers.</p>
+
         <h2>What matters to me</h2>
         <ul class="detail-list">
-          <li>Family and Friends</li>
+          <li>Family and friends</li>
           <li>Career</li>
-          <li>Personal Growth</li>
+          <li>Personal growth</li>
         </ul>
       </section>
-      <aside class="facts-box" aria-labelledby="facts-title">
-        <p class="small-heading">AT A GLANCE</p>
-        <h2 id="facts-title">A few quick facts</h2>
+
+      <!-- this aside groups short facts that support the main story -->
+      <aside>
+        <p class="label">At a glance</p>
+        <h2>A few quick facts</h2>
+        <!-- this definition list pairs each fact label with its answer -->
         <dl>
           <dt>Based in</dt>
           <dd>Waterford, Ireland</dd>
@@ -63,22 +71,24 @@
         </dl>
       </aside>
     </div>
-    <section class="quote-panel section-spacing" aria-labelledby="quote-title">
-      <p class="small-heading" id="quote-title">A LITTLE INSPIRATION</p>
-      <blockquote>
-        <p>
-          "The only way to do great work is to love what you do. If you haven't
-          found it yet, keep looking. Don't settle."
-        </p>
-      </blockquote>
-      <p class="quote-credit">- Steve Jobs</p>
-    </section>
+
+    <!-- this section highlights a quotation and identifies its author -->
+    <div>
+      <section class="quote">
+        <blockquote>
+          "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle."
+        </blockquote>
+        <p>- Steve Jobs</p>
+      </section>
+    </div>
   </main>
-  <footer class="site-footer">
-    <div class="container footer-inner">
+
+  <!-- this footer shows the site copyright which is my name, name, and back-to-top link -->
+  <footer>
+    <div class="container footer-row">
       <p>&copy; 2026 Tomasz Fornal</p>
-      <p>A little about me, and what I enjoy.</p>
-      <a href="#main-content">Back to top ↑</a>
+      <p>My Personal Website</p>
+      <a href="#top">Back to top</a>
     </div>
   </footer>
 </body>
